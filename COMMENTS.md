@@ -17,5 +17,5 @@ Foi utilizado o framework Vue, com integração do Vuex e Vue Router e Vuetify c
 - Colocaria arquitetura MVC no server, foi algo que eu tive que dificuldade com o pouco tempo
 - Interface gráfica, deixaria mais responsivo e agradável
 
-4. Quais requisitos obrigatórios que não foram entregues
+4. Quais requisitos obrigatórios que não foram entregues.
 Todos foram entregues.
