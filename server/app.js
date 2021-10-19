@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // DISABLE CORS ERROR
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
-  res.header("withCredentials", true);
+  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
@@ -45,13 +45,7 @@ app.get('/students/:id', function (req, res) {
 // INSERT A STUDENT
 app.post('/students', [
   // DATA VALIDATION
-  body('email').isEmail().withMessage("E-mail inválido.")
-    .custom(async email => {
-      const value = await isEmailInUse(email);
-      if (value) {
-        throw new Error('E-mail já cadastrado!');
-      }
-    }),
+  body('email').isEmail().withMessage("E-mail inválido."),
   body('document').isLength({ min: 11, max: 11 }).withMessage("É necessário ter 11 caracteres.")
     .custom(async document => {
       const value = await isDocumentInUse(document);
@@ -85,19 +79,13 @@ app.post('/students', [
 
 app.put('/students/:id', [
   // DATA VALIDATION
-  body('email').isEmail().withMessage("E-mail inválido.")
-    .custom(async email => {
-      const value = await isEmailInUse(email);
-      if (value) {
-        throw new Error('E-mail já cadastrado!');
-      }
-    }),
+  body('email').isEmail().withMessage("E-mail inválido."),
 ], function (req, res) {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
   }
-  
+
   connection.query(
     `UPDATE student 
     SET name = ?, email = ? 
@@ -126,19 +114,6 @@ app.delete('/students/:id', function (req, res) {
 function isDocumentInUse(document) {
   return new Promise((resolve, reject) => {
     connection.query('SELECT COUNT(*) AS total FROM student WHERE document = ?', [document], function (error, results, fields) {
-      if (!error) {
-        return resolve(results[0].total > 0);
-      } else {
-        return reject(new Error('Erro com a conexão.'));
-      }
-    }
-    );
-  });
-}
-
-function isEmailInUse(email) {
-  return new Promise((resolve, reject) => {
-    connection.query('SELECT COUNT(*) AS total FROM student WHERE email = ?', [email], function (error, results, fields) {
       if (!error) {
         return resolve(results[0].total > 0);
       } else {
