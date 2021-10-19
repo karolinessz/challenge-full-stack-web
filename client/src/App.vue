@@ -12,9 +12,6 @@ export default {
 
 <style>
 #app {
-  font-family: 'Inter', Helvetica, Arial, sans-serif !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background: #E9E9E9;
 }

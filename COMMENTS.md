@@ -21,7 +21,7 @@ Front-end:
 - axios
 
 ### O que você melhoraria se tivesse mais tempo 
-- Adicionaria Model e Controller no Back-end, visto que foi meu primeiro código em Express e Nodejs fiquei com dificuldade em implementar a arquitetura que desejava.
+- Melhoraria a arquitetura do Back-end, visto que foi meu primeiro código em Nodejs e Express, fiquei com dificuldade em implementar a arquitetura que desejava.
 - Aplicaria os testes unitários, eu não tive tanta prática e acredito que são bem importantes.
 - Tentaria lidar melhor com os erros da api, utilizei uma biblioteca para ajudar mas ainda senti que poderia estar melhor estruturado.
 
