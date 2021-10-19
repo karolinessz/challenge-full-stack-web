@@ -4,7 +4,7 @@ Um projeto Vuejs para a implementação da API REST de estudantes do projeto Ful
 
 # Comandos
 - Setup
-> npm install
+> yarn install
 
 - Iniciar o servidor
 > npm run dev

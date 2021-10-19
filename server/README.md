@@ -11,7 +11,7 @@ Para rodar o servidor corretamente, é necessário configurar seu o banco de dad
 > npm install
 
 - Iniciar o servidor
-> nodemon app
+> node app
 
 
 
