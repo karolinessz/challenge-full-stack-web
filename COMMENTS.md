@@ -6,7 +6,7 @@ O projeto está divido em duas pastas:
   **serve**: Back-End com Nodejs e Expressjs
 
 1. Decisão da arquitetura utilizada
-Foi utilizado o framework Vue, com integração do Vuex e Vue Router e Vuetify como framework UI. A biblioteca Axios foi adicionada para realizar as requisições e a biblioteca MDI Icons foi adicionada para a utilização de ícones. Banco de dados MySQL com servidor Nodejs e Express, com a bilbioteca Express-validator para validação dos dados das requisições.
+- Foi utilizado o framework Vue, com integração do Vuex e Vue Router e Vuetify como framework UI. A biblioteca Axios foi adicionada para realizar as requisições e a biblioteca MDI Icons foi adicionada para a utilização de ícones. Banco de dados MySQL com servidor Nodejs e Express, com a bilbioteca Express-validator para validação dos dados das requisições.
 
 2. Lista de bibliotecas de terceiros utilizadas
 - express-validator
@@ -18,4 +18,4 @@ Foi utilizado o framework Vue, com integração do Vuex e Vue Router e Vuetify c
 - Interface gráfica, deixaria mais responsivo e agradável
 
 4. Quais requisitos obrigatórios que não foram entregues.
-Todos foram entregues.
+- Todos foram entregues.
