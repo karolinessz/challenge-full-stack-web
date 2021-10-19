@@ -1,9 +1,9 @@
 Comentários sobre o projeto
 ===================
 
-O projeto está divido em duas pastas:
-  **client**: Front-end com Vue e Vuetify
-  **serve**: Back-end com Nodejs e Expressjs
+O projeto está divido em duas pastas, ambas com README para instruções:
+  - **client**: Front-end com Vue e Vuetify
+  - **server**: Back-end com Nodejs e Express
 
 ### Decisão da arquitetura utilizada 
 Foi utilizado o framework Vue, com integração do Vuex e Vue Router e Vuetify como framework UI. A biblioteca Axios foi adicionada para realizar as requisições e a biblioteca MDI Icons foi adicionada para a utilização de ícones. Banco de dados MySQL com servidor Nodejs e Express, com a bilbioteca Express-validator para validação dos dados das requisições.
